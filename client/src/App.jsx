@@ -17,19 +17,20 @@ import Monthly from "./scenes/monthly";
 import Breakdown from "./scenes/breakdown";
 import Admin from "./scenes/admin";
 import Performance from "./scenes/performance";
+import Landing from './scenes/landing';
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Routes>
             <Route element={<Layout />}>
               {/* layout will have navbar and sidebar */}
-              <Route path="/" element={<Navigate to="/dashboard" replace />} />
+              <Route path="/" element={<Landing />} />
               <Route path="/dashboard" element={<Dashboard />} />{" "}
               {/* will get loaded wherever <Outlet /> is located */}
               <Route path="/products" element={<Products />} />
@@ -42,7 +43,7 @@ function App() {
               <Route path="/breakdown" element={<Breakdown />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/performance" element={<Performance />} />
-
+              <Route path="*" element={<Navigate to="/dashboard" replace />} />
             </Route>
           </Routes>
         </ThemeProvider>

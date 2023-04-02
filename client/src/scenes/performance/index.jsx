@@ -12,7 +12,7 @@ import DataGridCustomToolbar from "../../components/DataGridCustomToolbar";
     const userId = useSelector((state) => state.global.userId);
     const { data, isLoading } = useGetUserPerformanceQuery(userId);
     // console.log(userId)
-    console.log(data)
+    // console.log(data)
 
     const columns = [
       {

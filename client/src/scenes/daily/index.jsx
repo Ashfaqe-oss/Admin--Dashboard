@@ -10,7 +10,7 @@ const Daily = () => {
     const [startDate, setStartDate] = useState(new Date("2021-02-01"));
     const [endDate, setEndDate] = useState(new Date("2021-03-01"));
     const { data } = useGetSalesQuery();
-    console.log(data);
+    // console.log(data);
     const theme = useTheme();
   
     const [formattedData] = useMemo(() => {

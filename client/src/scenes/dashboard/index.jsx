@@ -26,9 +26,9 @@ function Dashboard() {
   const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
   const isNonSmallScreens = useMediaQuery("(min-width: 600px)");
 
-  console.log(import.meta.env.VITE_BACKEND_URL);
+  // console.log(import.meta.env.VITE_BACKEND_URL);
   const { data, isLoading } = useGetDashboardQuery();
-  console.log(data);
+  // console.log(data);
 
   const columns = [
     {

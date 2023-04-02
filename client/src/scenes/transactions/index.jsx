@@ -22,7 +22,7 @@ const Transactions = () => {
       sort: JSON.stringify(sort), //sort is an object so stringifying
       search,
     });
-    console.log(data);
+    // console.log(data);
   
     const columns = [
       {
