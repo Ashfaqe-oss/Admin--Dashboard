@@ -28,8 +28,8 @@ const index = () => {
           title="Welcome to ECOMVISION"
           subtitle="You are logged in as Admin"
         />
-
-        <Box>
+      </FlexBetween>
+      <Box>
           <Button
             sx={{
               backgroundColor: theme.palette.secondary.light,
@@ -37,6 +37,7 @@ const index = () => {
               fontSize: "14px",
               fontWeight: "bold",
               padding: "20px 30px",
+              margin: "45px"
             }}
             onClick={() => {
               navigate("/dashboard");
@@ -46,7 +47,6 @@ const index = () => {
             Go to Dashboard
           </Button>
         </Box>
-      </FlexBetween>
     </Box>
   );
 };
